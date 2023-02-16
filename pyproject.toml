@@ -3,7 +3,11 @@ requires = ["setuptools>=62.4", "wheel", "cython"]
 
 [project]
 name = "setuptools-cuda"
-version = "0.0.1"
+version = "0.0.2"
+
+classifiers = [
+    "Operating System :: POSIX :: Linux"
+]
 
 [project.entry-points."distutils.setup_keywords"]
 cuda_extensions = "setuptools_cuda.setuptools_ext:cuda_extensions"
