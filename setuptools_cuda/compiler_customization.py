@@ -12,10 +12,8 @@ def customize_compiler_for_nvcc(compiler):
                 "-Xcompiler",
                 "-fPIC",
                 "-lstdc++",
-                "-lcudart",
                 "-shared",
-            ] + ext.extra_nvcc_args
-
+            ]
             compiler.set_executable("compiler_so", "nvcc")
             compiler._auto_depends = False
         else:
