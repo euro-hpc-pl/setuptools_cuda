@@ -1,5 +1,5 @@
 # distutils: language=c++
-# distutils: library_dirs=/home/dexter/Projects/setuptools-cuda/examples/saxpycu/ext/
+# distutils: library_dirs=/home/dexter/Projects/setuptools-cuda/examples/saxpycu/saxpycu/
 ctypedef fused real:
     double
     float

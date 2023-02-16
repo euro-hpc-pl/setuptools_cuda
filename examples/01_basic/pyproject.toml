@@ -3,9 +3,5 @@ requires = ["setuptools-cuda @ file:///home/dexter/Projects/setuptools-cuda/", "
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "example"
+name = "saxpycu"
 version = "0.0.1"
-
-
-
-
