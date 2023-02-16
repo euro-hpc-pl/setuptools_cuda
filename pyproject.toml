@@ -5,7 +5,7 @@ requires = ["setuptools>=62.4", "wheel", "cython"]
 name = "setuptools-cuda"
 description = "Setuptools plugin for compiling CUDA-enable extension modules"
 readme = "README.md"
-version = "0.0.2"
+version = "0.0.3"
 
 classifiers = [
     "Operating System :: POSIX :: Linux"
