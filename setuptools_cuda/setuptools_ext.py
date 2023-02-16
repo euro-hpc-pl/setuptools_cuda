@@ -25,6 +25,10 @@ def add_cuda_extensions(dist: Distribution) -> None:
                 self.compiler.has_nvcc = True
                 for ext in self.extensions:
                     ext.include_dirs += [os.path.join(cuda_home, "include")]
+                    ext.library_dirs += [
+                        os.path.join(cuda_home, "lib64"),
+                        os.path.join(cuda_home, "lib"),
+                    ]
             except ValueError:
                 self.compiler.has_nvcc = False
 
@@ -43,8 +47,6 @@ def add_cuda_extensions(dist: Distribution) -> None:
 def cuda_extensions(
     dist: Distribution, attr: Literal["cuda_extensions"], value: List[CudaExtension]
 ) -> None:
-    with open("dupa.txt", "w") as f:
-        f.write("ddd")
     assert attr == "cuda_extensions"
     has_cuda_extensions = len(value) > 0
 
@@ -54,8 +56,4 @@ def cuda_extensions(
         return old_has_ext_modules() or has_cuda_extensions
 
     dist.has_ext_modules = has_ext_modules
-
-    if has_cuda_extensions:
-        print("Yay! We'll be building CUDA extensions")
-
     add_cuda_extensions(dist)
