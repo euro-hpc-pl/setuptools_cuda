@@ -2,7 +2,7 @@
 requires = ["setuptools>=62.4", "wheel", "cython"]
 
 [project]
-name = "setuptools_cuda"
+name = "setuptools-cuda"
 version = "0.0.1"
 
 [project.entry-points."distutils.setup_keywords"]
