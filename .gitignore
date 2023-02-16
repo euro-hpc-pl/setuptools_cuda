@@ -141,3 +141,4 @@ dmypy.json
 
 examples/*/build/*.egg-info
 /examples/01_basic/saxpycu/saxpy.cpp
+/examples/02_thrust/thrustcu/thrustcu.cpp
