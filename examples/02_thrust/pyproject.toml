@@ -1,0 +1,9 @@
+[build-system]
+requires = ["setuptools-cuda @ file:///home/dexter/Projects/setuptools-cuda/", "setuptools", "wheel", "cython"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thrustcu"
+version = "0.0.1"
+
+dependencies = ["pytest", "numpy"]
