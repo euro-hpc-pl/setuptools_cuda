@@ -11,7 +11,7 @@ higher-level abstractions over CUDA that can be accessed in Python. For instance
 However, when it comes to compiling extension modules that use CUDA, surprisingly there seems to be no good
 solution that just works out of the box. Typically, people tend to integrate the CUDA code into their extension
 modules either using some third-party build systems or by writing some ad-hoc hacks for setuptools (see e.g.
-[this](https://stackoverflow.com/questions/10034325/can-python-distutils-compile-cuda-code) StakOverflow question.
+[this](https://stackoverflow.com/questions/10034325/can-python-distutils-compile-cuda-code) StakOverflow question).
 
 The `setuptools-cuda` tries to fill this niche. It allows one for defining extension modules containing `.cu`
 compilation units that will be compiled with `nvcc`. Such extensions can then be build using normal `setuptools`
@@ -31,7 +31,7 @@ Using `setuptools-cuda` is easy and requires you to perform the following steps.
    If you are not using isolated builds, you should install `setuptools-cuda` in
    your environment using `pip`.
 
-2. Declare your extension module by passing list of `CUDAExtension` objects to `cuda_extensions` keyword to
+2. Declare your extension module by passing list of `CudaExtension` objects to `cuda_extensions` keyword to
    the `setup()` function call in `setup.py`. For instance, one of the examples in this repository has
    the following `setup.py` file:
 
