@@ -23,6 +23,9 @@ void saxpy_wrapper(T a, T* x, T* y, int n, int numThreads, int numBlocks)
   _saxpy<<<numThreads, numBlocks>>>(a, dx, dy, n);
 
   cudaMemcpy(y, dy, n * sizeof(T), cudaMemcpyDeviceToHost);
+
+  cudaFree(dx);
+  cudaFree(dy);
 }
 
 template void saxpy_wrapper(float, float*, float*, int, int, int);
