@@ -14,6 +14,7 @@ jobs:
       - name: build_and_run_examples
         run: |
           pip install .
+          pip install cython
           cd examples/01_basic
           pip install --no-build-isolation .          
           pytest
