@@ -15,7 +15,9 @@ jobs:
         run: |
           cd examples/01_basic
           pip install .
+          pip install pytest-cov
           pytest --cov=setuptools_cuda --cov-report=xml
           cd ../02_thrust
           pip install .
+          pip install pytest-cov
           pytest --cov=setuptools_cuda --cov-report=xml
