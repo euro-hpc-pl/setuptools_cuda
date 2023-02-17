@@ -1,4 +1,4 @@
-name: Build and test examples
+name: Testing examples
 on: [push]
 jobs:
   run_tests:
