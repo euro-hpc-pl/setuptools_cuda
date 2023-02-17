@@ -13,9 +13,10 @@ jobs:
           python-version: ${{ matrix.python-versions }}
       - name: build_and_run_examples
         run: |
+          pip install .
           cd examples/01_basic
-          pip install .          
+          pip install --no-build-isolation .          
           pytest
           cd ../02_thrust
-          pip install .        
+          pip install --no-build-isolation .        
           pytest
