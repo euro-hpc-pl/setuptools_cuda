@@ -1,5 +1,7 @@
 # Setuptools plugin for CUDA extensions
 
+[![PyPI version](https://badge.fury.io/py/setuptools-cuda.svg)](https://badge.fury.io/py/setuptools-cuda)
+
 The `setuptools-cuda` is a `setuptools` plugin for building CUDA enabled Python extension modules.
 
 ## How does it compare to other packages on the market?
