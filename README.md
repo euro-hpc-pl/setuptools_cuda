@@ -1,6 +1,7 @@
 # Setuptools plugin for CUDA extensions
 
 [![PyPI version](https://badge.fury.io/py/setuptools-cuda.svg)](https://badge.fury.io/py/setuptools-cuda)
+[![github actions](https://github.com/euro-hpc-pl/setuptools_cuda/actions/workflows/build-and-test-examples.yml/badge.svg)](https://github.com/euro-hpc-pl/setuptools_cuda/actions/workflows/build-and-test-examples.yml)
 
 The `setuptools-cuda` is a `setuptools` plugin for building CUDA enabled Python extension modules.
 
