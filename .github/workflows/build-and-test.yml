@@ -3,8 +3,19 @@ on: [push]
 jobs:
   train:
     runs-on: [self-hosted,gpu]
+    strategy:
+      matrix:
+        python-versions: ["3.8", "3.9", "3.10"]
     steps:
       - uses: actions/checkout@v2
-      - name: cml_run
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-versions }}
+      - name: build_and_run_examples
         run: |
-          nvidia-smi
+          cd ../01_basic
+          pip install .
+          pytest --cov=setuptools_cuda --cov-report=xml
+          cd ../02_thrust
+          pip install .
+          pytest --cov=setuptools_cuda --cov-report=xml
