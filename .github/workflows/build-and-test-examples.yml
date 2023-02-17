@@ -14,7 +14,7 @@ jobs:
       - name: build_and_run_examples
         run: |
           pip install .
-          pip install cython wheel
+          pip install -U setuptools cython wheel numpy
           cd examples/01_basic
           pip install --no-build-isolation .          
           pytest
