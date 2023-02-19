@@ -21,5 +21,5 @@ that, you can either experiment on your own, on read the detailed manual.
 :maxdepth: 2
 
 examples/index.md
-creating_extensions.md
+manual.md
 :::
