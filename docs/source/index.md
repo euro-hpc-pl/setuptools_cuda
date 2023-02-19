@@ -14,16 +14,12 @@ should instead take a look at other packages.
 
 ## Getting started
 
-We recommend you start by reading the overview in our quickstart guide and then 
-take a look at the examples (which we thoroughly discuss here). After 
-that, you can either experiment on your own, on read more-in depth extension 
-creator guide..
+We recommend you start by taking a look at the examples. After 
+that, you can either experiment on your own, on read the detailed manual.
 
 :::{toctree}
 :maxdepth: 2
 
-
-quickstart.md
 examples/index.md
 creating_extensions.md
 :::
