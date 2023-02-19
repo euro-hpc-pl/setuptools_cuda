@@ -35,3 +35,10 @@ This example shows how the basic saxpy implementation works with
 
 The second example demonstrates how `setuptools-cuda` can be integrated with 
 thrust. 
+
+:::{toctree}
+:hidden:
+
+example01_saxpy.md
+example02_thrust.md
+:::
