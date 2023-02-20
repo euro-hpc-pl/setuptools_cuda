@@ -3,11 +3,11 @@ name: Run tests and other quality checks
 on: [pull_request]
 
 jobs:
-  run_quality_cheks:
+  run_quality_checks:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v4
         with:
           python-version: 3.11
       - uses: actions/checkout@v3
