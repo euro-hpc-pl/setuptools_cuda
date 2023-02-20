@@ -1,11 +1,11 @@
 [build-system]
-requires = ["setuptools>=62.4", "wheel", "cython"]
+requires = ["setuptools>=62.4", "setuptools_scm[toml]>=3.4", "wheel", "cython"]
 
 [project]
 name = "setuptools-cuda"
 description = "Setuptools plugin for compiling CUDA-enable extension modules"
 readme = "README.md"
-version = "0.0.3"
+dynamic = ["version"]
 
 classifiers = [
     "Operating System :: POSIX :: Linux"
