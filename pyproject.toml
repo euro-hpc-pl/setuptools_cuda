@@ -35,3 +35,4 @@ exclude = '''
   | \.venv
 )/
 '''
+[tool.setuptools_scm]
