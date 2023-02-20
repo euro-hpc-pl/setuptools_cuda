@@ -15,21 +15,9 @@ repos:
     hooks:
       - id: black
         args: ["--check"]
-        language_version: python3.9
+        language_version: python3.11
 
   - repo: https://github.com/pycqa/flake8
     rev: 6.0.0
     hooks:
       - id: flake8
-
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.0.0
-    hooks:
-      - id: mypy
-        args: [
-          --namespace-packages,
-          --explicit-package-bases,
-          --ignore-missing-imports,
-          --install-types,
-          --non-interactive
-        ]

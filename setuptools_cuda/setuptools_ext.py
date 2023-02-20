@@ -2,7 +2,6 @@ import os
 from distutils.command.build_ext import build_ext
 from typing import List, Literal, Type, cast
 
-from Cython.Build import cythonize
 from setuptools.dist import Distribution
 
 from .compiler_customization import customize_compiler_for_nvcc
@@ -35,11 +34,10 @@ def add_cuda_extensions(dist: Distribution) -> None:
             build_ext.build_extensions(self)
 
     dist.cmdclass["build_ext"] = BuildCudaExtension
-    cythonized_cuda_extensions = cythonize(dist.cuda_extensions)
     dist.ext_modules = (
-        cythonized_cuda_extensions
+        dist.cuda_extensions
         if dist.ext_modules is None
-        else dist.ext_modules + cythonized_cuda_extensions
+        else dist.ext_modules + dist.cuda_extensions
     )
     print(dist.ext_modules)
 

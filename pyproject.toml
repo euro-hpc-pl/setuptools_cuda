@@ -1,14 +1,25 @@
 [build-system]
-requires = ["setuptools>=62.4", "wheel", "cython"]
+requires = ["setuptools>=62.4", "setuptools_scm[toml]>=3.4", "wheel", "cython"]
 
 [project]
 name = "setuptools-cuda"
 description = "Setuptools plugin for compiling CUDA-enable extension modules"
 readme = "README.md"
-version = "0.0.3"
+dynamic = ["version"]
 
 classifiers = [
     "Operating System :: POSIX :: Linux"
+]
+
+[project.optional-dependencies]
+dev = ["flake8>=4.0.1", "black>=21.12b0", "isort>=5.10.1", "mypy>=0.961"]
+docs = [
+    "sphinx~=5.3.0",
+    "pydata-sphinx-theme~=0.11.0",
+    "sphinx_math_dollar~=1.2.1",
+    "myst-parser~=0.18.1",
+    "iplantuml~=0.1.1",
+    "sphinx-design~=0.3.0"
 ]
 
 [project.entry-points."distutils.setup_keywords"]

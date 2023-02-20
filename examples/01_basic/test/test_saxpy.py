@@ -11,8 +11,7 @@ NUM_THREADS = 1024
 def generate_test_cases():
     rng = np.random.default_rng(1234)
     return [
-        (rng.random(), rng.random(VECTOR_SIZE), rng.random(VECTOR_SIZE))
-        for _ in range(NUM_TESTS)
+        (rng.random(), rng.random(VECTOR_SIZE), rng.random(VECTOR_SIZE)) for _ in range(NUM_TESTS)
     ]
 
 

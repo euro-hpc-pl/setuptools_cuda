@@ -21,15 +21,9 @@ INTEGER_DTYPES = (
 def generate_test_cases():
     rng = np.random.default_rng(1234)
     return [
+        *[rng.random(VECTOR_SIZE, dtype=dtype) for _ in range(NUM_TESTS) for dtype in FLOAT_DTYPES],
         *[
-            rng.random(VECTOR_SIZE, dtype=dtype)
-            for _ in range(NUM_TESTS)
-            for dtype in FLOAT_DTYPES
-        ],
-        *[
-            rng.integers(
-                np.iinfo(dtype).min, np.iinfo(dtype).max, VECTOR_SIZE, dtype=dtype
-            )
+            rng.integers(np.iinfo(dtype).min, np.iinfo(dtype).max, VECTOR_SIZE, dtype=dtype)
             for _ in range(NUM_TESTS)
             for dtype in INTEGER_DTYPES
         ],
